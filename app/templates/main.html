@@ -7,9 +7,10 @@
     </head>
     <body>
         <div id='header'>
+        {% if header %}
+            <h2>{{header}}</h2>
+        {% else %}
             <h2>Benjamin (BJ) Johnson</h2>
-        {% if subheader %}
-            <h3>{{subheader}}</h3>
         {% endif %}
         </div>
         <div id='content'>
@@ -19,13 +20,25 @@
             <hr/>
             <div class='nav'>
                 <ul>
-                    <li><a href='profile' title='Profile'>Profile<a/></li>
+                    <li>
+                        <a href='profile' title='Profile' {% if 'profile' in request.path %}class='selected'{% endif %}>
+                            Profile
+                        <a/>
+                    </li>
                     &mdash;
-                    <li><a href='portfolio' title='Portfolio'>Portfolio<a/></li>
+                    <li>
+                        <a href='portfolio' title='Portfolio' {% if 'portfolio' in request.path %}class='selected'{% endif %}>
+                            Portfolio
+                        <a/>
+                    </li>
                     &mdash;
-                    <li><a href='certs' title='Certifications and Awards'>Certs<a/></li>
+                    <li>
+                        <a href='certs' title='Certifications and Awards' {% if 'certs' in request.path %}class='selected'{% endif %}>
+                            Certs
+                        <a/>
+                    </li>
                 </ul>
-                <a href='' title='Home' class='fa fa-home'></a>
+                <a href='' title='Home' class='fa fa-home {% if 'index' in request.path or request.path=='/' %}selected{% endif %}'></a>
             </div>
             <div id='subfooter'>
                 
