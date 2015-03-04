@@ -1,6 +1,56 @@
 {% extends "main.html" %}
 {% block content %}
-    <p>Main Content</p>
-    <div id='a'>a</div>
-    <div id='b'>b</div>
+<div class='container-fluid'>
+    <div class='col-md-2'>
+        <img class='rht' src='{{request.url_root}}static/images/rht_logo_c.gif'></img>
+    </div>
+    <div class='col-md-10'>
+        <h3 class='subheader'>Salaried Professional Services Consultant</h3>
+    </div>
+    <div class='col-md-3'>
+        <ul>Service Line
+            <li>Full Software Life Cycle design and implementation</li>
+            <li>Web Application Development</li>
+            <li>System Design</li>
+            <li>Legacy System Troubleshooting and upkeep</li>
+            <li>Full Product Support</li>
+        </ul>
+        <ul>Industry Lines
+            <li>IT</li>
+            <li>Retail</li>
+            <li>Service</li>
+            <li>Construction</li>
+        </ul>
+        <ul>Technology
+            <li>Python</li>
+            <li>PostgreSQL</li>
+            <li>HTML</li>
+            <li>Javascript</li>
+            <li>jQuery</li>
+            <li>PHP</li>
+            <li>MYSQL</li>
+            <li>Servoy</li>
+        </ul>
+       <ul>Education
+            <li>BS Information Technology</li>
+        
+        <ul>Certification
+            <li>Microsoft Certified Professional Windows 7 Installation</li>
+            </ul>
+            <ul>Comptia
+            <li>A+</li>
+            <li>Network+</li>
+            <li>Security+</li>
+            <li>Project+</li>
+            </ul>
+            <ul>
+            <li>CIW V5 associate</li>
+            <li>CIW Database Design Specialist</li>
+            </ul>
+        </ul>
+    </div>
+    <div class='col-md-9'>
+        
+    </div>
+</div>
 {% endblock %}

@@ -2,47 +2,52 @@
     <head>
         <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"-->
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="static/css/main.css">
         <title>BJ Johnson</title>
     </head>
     <body>
-        <div id='header'>
-        {% if header %}
-            <h2>{{header}}</h2>
-        {% else %}
-            <h2>Benjamin (BJ) Johnson</h2>
-        {% endif %}
-        </div>
-        <div id='content'>
-            {% block content %}{% endblock %}
-        </div>
-        <div id='footer'>
-            <hr/>
-            <div class='nav'>
-                <ul>
-                    <li>
-                        <a href='profile' title='Profile' {% if 'profile' in request.path %}class='selected'{% endif %}>
-                            Profile
-                        <a/>
-                    </li>
-                    &mdash;
-                    <li>
-                        <a href='portfolio' title='Portfolio' {% if 'portfolio' in request.path %}class='selected'{% endif %}>
-                            Portfolio
-                        <a/>
-                    </li>
-                    &mdash;
-                    <li>
-                        <a href='certs' title='Certifications and Awards' {% if 'certs' in request.path %}class='selected'{% endif %}>
-                            Certs
-                        <a/>
-                    </li>
-                </ul>
-                <a href='' title='Home' class='fa fa-home {% if 'index' in request.path or request.path=='/' %}selected{% endif %}'></a>
+        <div class='wrapper'>
+            <div id='header'>
+            {% if header %}
+                <h2>{{header}}</h2>
+            {% else %}
+                <h2>Benjamin (BJ) Johnson</h2>
+            {% endif %}
             </div>
-            <div id='subfooter'>
-                
+            <div id='content'>
+                {% block content %}{% endblock %}
+                <div class='push'>&nbsp;</div>
+            </div>
+            <div id='footer'>
+                <hr/>
+                <div class='nav'>
+                    <ul>
+                        <li>
+                            <a href='profile' title='Profile' {% if 'profile' in request.path %}class='selected'{% endif %}>
+                                Profile
+                            <a/>
+                        </li>
+                        &mdash;
+                        <li>
+                            <a href='portfolio' title='Portfolio' {% if 'portfolio' in request.path %}class='selected'{% endif %}>
+                                Portfolio
+                            <a/>
+                        </li>
+                        &mdash;
+                        <li>
+                            <a href='certs' title='Certifications and Awards' {% if 'certs' in request.path %}class='selected'{% endif %}>
+                                Certs
+                            <a/>
+                        </li>
+                    </ul>
+                    <a href='{{request.url_root}}' title='Home' class='fa fa-home {% if 'index' in request.path or request.path=='/' %}selected{% endif %}'></a>
+                </div>
+                <div id='subfooter'>
+                    
+                </div>
             </div>
         </div>
+       
     </body>
 </html>

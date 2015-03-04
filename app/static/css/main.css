@@ -1,32 +1,58 @@
-*{
+html, body {
     margin: 0;
     padding: 0;
-}
-body {
     background: #222;
     color: #EEE;
-    margin: 15px;
+    height: 100%;
+    overflow: hidden;
 }
 
-div#a {
-    width: 50%;
-    background: #555;
-    float: left;
+.wrapper {
+    min-height: 100%;
+    position: relative;
 }
-div#b {
-    width: 50%;
-    background: #DDD;
-    float: left;
+
+/* header */
+#header {
+    width: 90%;
+    margin: 25px 5%;
 }
+
+/* content */
+#content {
+    width: 100%;
+    margin: 0;
+    padding: 0 10%;
+    height: 80%;
+    overflow: auto;
+}
+
+img.rht {
+    background: #EEE;
+}
+
+.subheader {
+    margin: 53px 0px 0px -13px;
+    border-bottom: 2px solid #EEE;
+    padding: 0 0 0 10px;
+}
+
 /* footer */
+.push {
+    height: 25px;
+}
+
 #footer {
     position: absolute;
     bottom: 0;
-    padding: 0 0 20px;
+    left: 0;
     width: 90%;
     margin: 0 5%;
     float: left;
+    background: #222;
+    height: 125px;
 }
+
 
 #footer hr {
     border: none;
@@ -38,6 +64,7 @@ div#b {
     background: -moz-linear-gradient(#EEE, #444); /* For Firefox 3.6 to 15 */
     background: linear-gradient(#EEE, #444); /* Standard syntax */
     border-radius: 10px;
+    margin: 0;
 }
 
 .nav {
@@ -69,4 +96,8 @@ div#b {
 
 .nav a.fa {
     margin: 5px 50%;
+}
+
+.nav a.selected {
+    color: #555;
 }
