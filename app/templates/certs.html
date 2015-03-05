@@ -1,6 +1,20 @@
 {% extends "main.html" %}
 {% block content %}
-    <p>Main Content</p>
-    <div id='a'>a</div>
-    <div id='b'>b</div>
+    <div class='col-md-4'>
+        <h3>CompTIA</h3>
+        <img class='cert' src='static/images/A+_CE_medium.jpg' alt='A+'/>
+        <img class='cert' src='static/images/Network+_CE.jpg' alt='Network+'/>
+        <img class='cert' src='static/images/Security+_CE.jpg' alt='Security+'/>
+        <img class='cert' src='static/images/Project+_Certified.jpg' alt='Project+'/>
+    </div>
+    <div class='col-md-4'>
+        <h3>Microsoft</h3>
+        <img class='cert' src='static/images/MCTS_2013(rgb)_1309.jpg' alt='Microsoft Windows 7 configuration'/>
+    </div>
+    <div class='col-md-4'>
+        <h3>CIW</h3>
+        <a href='http://www.ciwcertified.com' target='_blank'><img class='cert' src='static/images/CIW_SM_logo.jpg' alt='CIW'/></a>
+        <p>CIW V5 associate</p>
+        <p>CIW Database Design Specialist</p>
+    </div>
 {% endblock %}

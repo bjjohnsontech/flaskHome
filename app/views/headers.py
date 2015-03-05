@@ -5,3 +5,6 @@ def profile():
     <div class='col-md-10'>
         <h3 class='subheader'>Salaried Professional Services Consultant</h3>
     </div>'''
+    
+def portfolio():
+    return "<h2>What I've done</h2>"

@@ -26,6 +26,10 @@ html, body {
     padding: 0 0 0 10px;
 }
 
+img.rht {
+    background: #EEE;
+}
+
 /* content */
 #content {
     width: 100%;
@@ -35,10 +39,15 @@ html, body {
     overflow: auto;
 }
 
-img.rht {
-    background: #EEE;
+#content p {
+    margin: 0 0 0 15px;
 }
 
+.cert {
+    width: 200px;
+    display: block;
+    margin: 10px 10px;
+}
 
 /* footer */
 .push {
@@ -76,9 +85,12 @@ img.rht {
     font-size: 200%;
 }
 
+.nav a {
+    color: #EEE;
+}
+
 .nav ul {
     padding: 0;
-    list-style: none;
     width: 100%;
     text-align: center;
 }

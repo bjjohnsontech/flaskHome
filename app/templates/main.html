@@ -17,7 +17,7 @@
             </div>
             <div id='content'>
                 {% block content %}{% endblock %}
-                <div class='push'>&nbsp;</div>
+                <div class='push col-md-12'>&nbsp;</div>
             </div>
             <div id='footer'>
                 <hr/>
@@ -26,19 +26,19 @@
                         <li>
                             <a href='profile' title='Profile' {% if 'profile' in request.path %}class='selected'{% endif %}>
                                 Profile
-                            <a/>
+                            </a>
                         </li>
-                        &mdash;
+                        <li>&mdash;</li>
                         <li>
                             <a href='portfolio' title='Portfolio' {% if 'portfolio' in request.path %}class='selected'{% endif %}>
                                 Portfolio
-                            <a/>
+                            </a>
                         </li>
-                        &mdash;
+                        <li>&mdash;</li>
                         <li>
                             <a href='certs' title='Certifications and Awards' {% if 'certs' in request.path %}class='selected'{% endif %}>
                                 Certs
-                            <a/>
+                            </a>
                         </li>
                     </ul>
                     <a href='{{request.url_root}}' title='Home' class='fa fa-home {% if 'index' in request.path or request.path=='/' %}selected{% endif %}'></a>

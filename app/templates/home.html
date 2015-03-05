@@ -1,6 +1,25 @@
 {% extends "main.html" %}
 {% block content %}
-    <p>Main Content</p>
-    <div id='a'>a</div>
-    <div id='b'>b</div>
+    <div class='col-md-4'>
+        <h2>Latest</h2>
+        <ul>
+            <li>Accepted Contract starting on March 16th</li>
+            <li>Built a new Website in Flask and Jinja2</li>
+            <li>Was introduced to xDebug for PHP</li>
+            <li>Finished a Website for a Cincinnati non-profit</li>
+        </ul>
+    </div>
+    <div class='col-md-8'>
+        <h3>New Website</h3>
+        <p>This site is built in Python using Flask as the router and Jinja2 as the templating engine, this page is but a small sample of my work. More examples can be seen in my <a href='portfolio' title='portfolio'>portfolio</a>,
+        on <a href='http://www.codeprojects.guru' title='codeprojects' target='_blank'>CodeProjects.guru</a>, or at <a href='https://github.com/bnjmnjhnsn' title="BJ's Github" target='_blank'>GitHub.</a></p>
+        <p>Flask gives the developer a simple application routing framework, with very little overhead. It uses a wsgi interface available for a number of server platforms.</p>
+        <p>Jinja2 is a templating engine that allows python variables and function returns to be imbedded in an html document. Templates can be nested, allowing the developer to build one structure and use it in multiple pages.</p>
+        <h3>PHP Xdebug</h3>
+        <p>I was recently introduced to Xdebug, a php extension.
+        I imeadiately installed it on my dev server at home, and as I was starting a new Drupal site, saw my very first PHP stackTrace.</p>
+        <p>Being a Python developer, I am familiar with stackTraces, but did not know there was a way to get them in php.
+        I am still evaluating debuggers, but for right now, just the log output is so much better I must thank Steve and Kevin.</p>
+        <p>Overall, Xdebug's log output is not much different than Python's default. I look forward to working on a PHP project with the new debug capabilities.</p>
+    </div>
 {% endblock %}
