@@ -1,6 +1,6 @@
 from flask import render_template as rendTemp
 from app import app
-
+from app.views import headers
 
 @app.route('/')
 @app.route('/index')
@@ -9,7 +9,7 @@ def index():
 
 @app.route('/profile')
 def profile():
-    return rendTemp('profile.html', header='Profile')
+    return rendTemp('profile.html', header=headers.profile())
 
 @app.route('/portfolio')
 def port():

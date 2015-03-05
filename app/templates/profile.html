@@ -1,56 +1,76 @@
 {% extends "main.html" %}
 {% block content %}
-<div class='container-fluid'>
-    <div class='col-md-2'>
-        <img class='rht' src='{{request.url_root}}static/images/rht_logo_c.gif'></img>
-    </div>
-    <div class='col-md-10'>
-        <h3 class='subheader'>Salaried Professional Services Consultant</h3>
-    </div>
-    <div class='col-md-3'>
-        <ul>Service Line
-            <li>Full Software Life Cycle design and implementation</li>
-            <li>Web Application Development</li>
-            <li>System Design</li>
-            <li>Legacy System Troubleshooting and upkeep</li>
-            <li>Full Product Support</li>
-        </ul>
-        <ul>Industry Lines
-            <li>IT</li>
-            <li>Retail</li>
-            <li>Service</li>
-            <li>Construction</li>
-        </ul>
-        <ul>Technology
-            <li>Python</li>
-            <li>PostgreSQL</li>
-            <li>HTML</li>
-            <li>Javascript</li>
-            <li>jQuery</li>
-            <li>PHP</li>
-            <li>MYSQL</li>
-            <li>Servoy</li>
-        </ul>
-       <ul>Education
-            <li>BS Information Technology</li>
+<div class='col-md-3'>
+    <h4>Service Line</h4>
+    <ul>
+        <li>Full Software Life Cycle design and implementation</li>
+        <li>Web Application Development</li>
+        <li>System Design</li>
+        <li>Legacy System Troubleshooting and upkeep</li>
+        <li>Full Product Support</li>
+    </ul>
+    <h4>Industry Lines</h4>
+    <ul>
+        <li>IT</li>
+        <li>Retail</li>
+        <li>Service</li>
+        <li>Construction</li>
+    </ul>
+    <h4>Technology</h4>
+    <ul>
+        <li>Python</li>
+        <li>HTML</li>
+        <li>Javascript</li>
+        <li>PHP</li>
+        <li>PostgreSQL</li>
         
-        <ul>Certification
-            <li>Microsoft Certified Professional Windows 7 Installation</li>
-            </ul>
-            <ul>Comptia
+        <li>MYSQL</li>
+        <li>Servoy</li>
+    </ul>
+    <h4>Education</h4>
+    <ul>
+        <li>BS Information Technology</li>
+    </ul>
+    <h4>Certification</h4>
+    <h5><strong>Microsoft</strong></h5>
+        <ul>
+            <li>Certified Professional Windows 7 Installation</li>
+        </ul>
+    <h5><strong>Comptia</strong></h5>
+        <ul>
             <li>A+</li>
             <li>Network+</li>
             <li>Security+</li>
             <li>Project+</li>
-            </ul>
-            <ul>
+        </ul>
+    <h5><strong>CIW</strong></h5>
+        <ul>
             <li>CIW V5 associate</li>
             <li>CIW Database Design Specialist</li>
-            </ul>
         </ul>
-    </div>
-    <div class='col-md-9'>
-        
-    </div>
 </div>
+<div class='col-md-9'>
+    <h4>Professional Experience</h4>
+    <ul>
+        <li>3+ years in Software Development and Engineering.</li>
+        <li>Led project teams from conception; gathering and explaining requirements, through design and development; working with customers and stakeholders in review processes and giving live demonstrations, to deployment; managing packaging, dependencies, and finalizing configurations.</li>
+        <li>Taken over maintenance of projects after all original devs have left and had limited documentation, written in a language he was not familiar with. He learned the language, succeeded in finding the bugs, and added new features when desired.</li>
+    </ul>
+    <h4>Major Projects</h4>
+    <ul>
+        <li>Led the design and development of a marketing email delivery system that incorporated 3 divergent internal customer systems into one delivery and reporting platform. When the company purchased another email marketing company, he was tasked with building a larger scale system that would incorporate all the features that this new system had from their existing paid for solution. This new system was built using the modularity of the existing Python / PostgreSQL backend to build multiple instances, that are controlled and report to the expanded PHP /javascript frontend. The new system delivers over 5 million emails a day on average, and has an reliability and accuracy rate >99%.</li>
+        
+        <li>Successfully automated 2 manual processes:</li>
+        <ul>
+            <h5>Change control</h5>
+        <li>Used by the entire IT department and data center, this application allows users to input, review, and schedule changes. It also contains sections for the CCRB to manage the calendar, including a jQuery widget that simplifies recurring plan scheduling. This system also allows auditors to follow compliance without needing to sort through numerous spreadsheets.</li>
+        <h5>Employee Termination</h5>
+        <li>Used by system operations, this system has helped automate the complex system of removing an employee from Active Directory, Exchange, and building access systems. Instead of a user having to go to each system, the application communicates to each, and reports it's progress and success</li>
+        </ul>
+        <li>Working with fellow developers, led process changes in his group; including adding Source Control(SVN), better code review(through Review Board), testing(unit and acceptance testing with Selenium), and continuous integration with standards compliance (using Jenkins, lints, and pep8)</li>
+        
+        <li>Stepped into a large and complex enterprise application written in Javascript using Servoy, a Java based application framework. Within days, he was contributing to the new contract; accepting and parsing an incoming file, inserting client data into and modifying MySQL databases, helping to redefine the internal data structures to be more efficient and extendable, and creating an output file that was digestible by the client's system.</li>
+    </ul>
+</div>
+
 {% endblock %}

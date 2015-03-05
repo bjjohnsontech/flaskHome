@@ -7,10 +7,10 @@
         <title>BJ Johnson</title>
     </head>
     <body>
-        <div class='wrapper'>
+        <div class='wrapper' class='container-fluid'>
             <div id='header'>
             {% if header %}
-                <h2>{{header}}</h2>
+                {{header|safe}}
             {% else %}
                 <h2>Benjamin (BJ) Johnson</h2>
             {% endif %}

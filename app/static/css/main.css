@@ -16,6 +16,14 @@ html, body {
 #header {
     width: 90%;
     margin: 25px 5%;
+    border-bottom: 2px solid #EEE;
+    height: 81px;
+}
+
+.subheader {
+    margin: 53px 0px 0px -45px;
+
+    padding: 0 0 0 10px;
 }
 
 /* content */
@@ -23,7 +31,7 @@ html, body {
     width: 100%;
     margin: 0;
     padding: 0 10%;
-    height: 80%;
+    height: 75%;
     overflow: auto;
 }
 
@@ -31,11 +39,6 @@ img.rht {
     background: #EEE;
 }
 
-.subheader {
-    margin: 53px 0px 0px -13px;
-    border-bottom: 2px solid #EEE;
-    padding: 0 0 0 10px;
-}
 
 /* footer */
 .push {
