@@ -5,7 +5,7 @@ from app.views import headers
 @app.route('/')
 @app.route('/index')
 def index():
-    return rendTemp('home.html')
+    return rendTemp('home.html', header=headers.home())
 
 @app.route('/profile')
 def profile():
@@ -17,4 +17,4 @@ def port():
 
 @app.route('/certs')
 def certs():
-    return rendTemp('certs.html', header='<h2>Certification</h2>')
+    return rendTemp('certs.html', header=headers.certs())
