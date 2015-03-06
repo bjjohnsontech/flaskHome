@@ -6,7 +6,8 @@
 }
 
 .tree li {
-    min-height: 20px;
+    min-height: 30px;
+    font-size: 150%;
     max-width: 375px;
     background: #393939;
     padding: 3px 0 3px 10px;
@@ -17,6 +18,7 @@
     display: none;
     background: #2B2B2B;
     border-bottom: solid #393939;
+    font-size: 75%;
 }
 
 .tree ul li:last-child {
@@ -31,6 +33,7 @@
 .tree ul li li {
     background: #393939;
     border-bottom: solid #2B2B2B;
+    font-size: 100%;
 }
 
 .tree ul li li:last-child {

@@ -37,11 +37,18 @@
         {% endif %}
             <div id='content' class='col-md-offset-1 col-md-10'>
                 {% block content %}{% endblock %}
+                <div class='col-md-12 footerSpace'>&nbsp;</div>
             </div>
             <div id='footer' class='col-md-offset-1 col-md-10'>
                 <hr/>
                 <div class='nav col-md-12'>
                     <ul>
+                        <li>
+                            <a href='{{request.url_root}}' title='Home' {% if 'index' in request.path or request.path=='/' %}class='selected'{% endif %}>
+                                Home
+                            </a>
+                        </li>
+                        <li>&mdash;</li>
                         <li>
                             <a href='profile' title='Profile' {% if 'profile' in request.path %}class='selected'{% endif %}>
                                 Profile
@@ -60,10 +67,14 @@
                             </a>
                         </li>
                     </ul>
-                    <a href='{{request.url_root}}' title='Home' class='fa fa-home {% if 'index' in request.path or request.path=='/' %}selected{% endif %}'></a>
                 </div>
-                <div id='subfooter'>
-                    
+                <div id='subfooter' class='col-md-12 col-lg-12'>
+                    <div class='col-xxs-12 col-xs-6 col-sm-6 col-md-6'>
+                        Site Design by: <a href='mailto:raaronallen@gmail.com'>Aaron Allen</a>
+                    </div>
+                    <div class='col-xxs-12 col-xs-6 col-sm-6 col-md-6 textR'>
+                        Built in Flask with Jinja2
+                    </div>
                 </div>
             </div>
         </div>

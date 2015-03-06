@@ -5,6 +5,22 @@ html, body {
     color: #EEE;
 }
 
+.floatR {
+    float: right;
+}
+
+.floatL {
+    float: left;
+}
+
+.textR {
+    text-align: right;
+}
+
+.textC {
+    text-align: center;
+}
+
 @media (max-width:768px){
     .col-xs-0 {
         display: none;
@@ -24,7 +40,7 @@ html, body {
 }
 .wrapper {
     min-height: 100%;
-    position: relative;
+    position: absolute;
 }
 
 /* header */
@@ -48,6 +64,7 @@ img.rht {
 .height-30 {
     height: 30px;
 }
+
 /* content */
 #content {
     margin-top: 5px;
@@ -64,12 +81,37 @@ img.rht {
     margin: 10px 10px;
 }
 
+@media (min-width:510px) {
+    .footerSpace {
+        height: 120px;
+    }
+}
+
+@media (max-width:509px) {
+    .footerSpace{
+        height: 160px;
+    }
+}
+
+@media (max-width:479px) {
+    .footerSpace{
+        height: 180px;
+    }
+}
 /* footer */
 
 #footer {
     background: #222;
     margin-top: 25px;
     margin-bottom: 25px;
+    bottom: 0px;
+    position: absolute;
+}
+
+@media (max-width: 991px) {
+    #footer {
+        width: 100%;
+    }
 }
 
 #footer hr {
@@ -119,4 +161,14 @@ img.rht {
 
 .nav a.selected {
     color: #555;
+}
+
+@media (max-width: 479px) {
+    .col-xxs-12 {
+        position: relative;
+        min-height: 1px;
+        padding-right: 15px;
+        padding-left: 15px;
+        width: 100%;
+    }
 }
