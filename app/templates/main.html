@@ -4,24 +4,40 @@
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="static/css/main.css">
+        {% if css %}
+            {{css|safe}}
+        {% endif %}
         <title>BJ Johnson</title>
     </head>
     <body>
         <div class='wrapper' class='container-fluid'>
-            <div id='header'>
-            {% if header %}
-                {{header|safe}}
-            {% else %}
-                <h2>Benjamin (BJ) Johnson</h2>
-            {% endif %}
+        {% if header %}
+            <div id='header' class='col-md-offset-1 col-md-10'>
+                <div class='col-md-2'>
+                    {% if 'image' in header %}
+                        <img class='{{header.image.class}}' src='{{header.image.src}}' alt='{{header.image.alt}}'></img>
+                    {% endif %}
+                </div>
+                <div class='col-md-10'>
+                    <div class='col-md-offset-8 col-md-4 socialButtons'>
+                        <div class="fb-share-button" data-href="http://www.bnjmnjhnsn.com/" data-layout="button_count"></div>
+                    </div>
+                    <div class='col-md-offset-1 col-md-6'>
+                        <h2 class='subheader'>{{header.line}}</h2>
+                    </div>
+                    <div class='col-md-5'>&nbsp;</div>
+                    <div class='col-md-5'>
+                        To hire Benjamin for your project, Email <a href='mailto:chuck.wirtz@rht.com'>Chuck Wirtz</a>
+                    </div>
+                </div>
             </div>
-            <div id='content'>
+        {% endif %}
+            <div id='content' class='col-md-offset-1 col-md-10'>
                 {% block content %}{% endblock %}
-                <div class='push col-md-12'>&nbsp;</div>
             </div>
-            <div id='footer'>
+            <div id='footer' class='col-md-offset-1 col-md-10'>
                 <hr/>
-                <div class='nav'>
+                <div class='nav col-md-12'>
                     <ul>
                         <li>
                             <a href='profile' title='Profile' {% if 'profile' in request.path %}class='selected'{% endif %}>
@@ -48,6 +64,18 @@
                 </div>
             </div>
         </div>
-       
+        <div id="fb-root"></div>
+        
     </body>
+    {% if js %}
+        {{js|safe}}
+    {% endif %}
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
 </html>

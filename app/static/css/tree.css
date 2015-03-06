@@ -1,0 +1,39 @@
+.tree, .tree ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.tree li {
+    min-height: 20px;
+    max-width: 375px;
+    background: #393939;
+    padding: 3px 0 3px 10px;
+    border-bottom: solid #222;
+}
+
+.tree ul li {
+    display: none;
+    background: #2B2B2B;
+    border-bottom: solid #393939;
+}
+
+.tree ul li:last-child {
+    border-bottom: none;
+    margin-bottom: -3px;
+}
+
+.tree li:hover ul li {
+    display: block;
+}
+
+.tree ul li li {
+    background: #393939;
+    border-bottom: solid #2B2B2B;
+}
+
+.tree ul li li:last-child {
+    border-bottom: none;
+}
+

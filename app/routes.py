@@ -9,7 +9,7 @@ def index():
 
 @app.route('/profile')
 def profile():
-    return rendTemp('profile.html', header=headers.profile())
+    return rendTemp('profile.html', header=headers.profile(), css='<link rel="stylesheet" href="static/css/tree.css">')
 
 @app.route('/portfolio')
 def port():
