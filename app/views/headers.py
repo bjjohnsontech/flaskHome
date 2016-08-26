@@ -5,11 +5,7 @@ def home():
 
 def profile():
     return {
-        'image': {
-            'class':'rht',
-            'src':'static/images/rht_logo_c.gif',
-            'alt':'Robert Half Technologies'
-        }, 'line' : 'Salaried Professional Services Consultant'
+        'line' : 'Full Stack Software Engineer'
     }
     
 def portfolio():

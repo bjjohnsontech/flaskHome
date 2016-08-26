@@ -4,6 +4,9 @@ html, body {
     background: #222;
     color: #EEE;
 }
+.marginR-25 {
+    margin-right: 25px;
+}
 
 .floatR {
     float: right;
@@ -19,6 +22,27 @@ html, body {
 
 .textC {
     text-align: center;
+}
+
+.btn-xsm {
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 1.25;
+    padding: 1px 5px;
+}
+div.modal-content{
+    background-color: #333;
+}
+
+form input{
+    color: #333;
+}
+
+form textarea{
+    color: #333;
+    width: 100%;
+    resize: none;
+    height: 90px;
 }
 
 @media (max-width:768px){
@@ -41,6 +65,7 @@ html, body {
 .wrapper {
     min-height: 100%;
     position: absolute;
+    width: 100%;
 }
 
 /* header */
@@ -97,6 +122,11 @@ img.rht {
     .footerSpace{
         height: 180px;
     }
+}
+
+#tasksDiv {
+    height: 100%;
+    
 }
 /* footer */
 

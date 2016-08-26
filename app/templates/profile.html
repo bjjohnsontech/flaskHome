@@ -1,26 +1,42 @@
 {% extends "main.html" %}
 {% block content %}
-<div class='col-md-3'>
-    <ul class='tree'>
-        <li>Service Line
-            <ul>
+<div class='col-md-3' ng-app="profileApp" ng-contoller='accordionCtrl'>
+    <script type="text/ng-template" id="group-template.html">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h4 class="panel-title" style="color:#fa39c3">
+          <a href tabindex="0" class="accordion-toggle" ng-click="toggleOpen()" uib-accordion-transclude="heading">
+            <span uib-accordion-header ng-class="{'text-muted': isDisabled}">
+              {{heading}}
+            </span>
+          </a>
+        </h4>
+      </div>
+      <div class="panel-collapse collapse" uib-collapse="!isOpen">
+        <div class="panel-body" style="text-align: right" ng-transclude></div>
+      </div>
+    </div>
+  </script>
+    <uib-accordion close-others="true">
+        <div uib-accordion-group class="panel-default" heading="Service Lines">
+            <ul class='tree'>
                 <li>Full Software Life Cycle design and implementation</li>
                 <li>Web Application Development</li>
                 <li>System Design</li>
                 <li>Legacy System Troubleshooting and upkeep</li>
                 <li>Full Product Support</li>
             </ul>
-        </li>
-        <li>Industry Lines
-            <ul>
+        </div>
+        <div uib-accordion-group class="panel-default" heading="Industry Lines">
+            <ul class='tree'>
                 <li>IT</li>
                 <li>Retail</li>
                 <li>Service</li>
                 <li>Construction</li>
             </ul>
-        </li>
-        <li>Technology
-            <ul>
+        </div>
+        <div uib-accordion-group class="panel-default" heading="Technology">
+            <ul class='tree'>
                 <li>Python</li>
                 <li>HTML</li>
                 <li>Javascript</li>
@@ -30,14 +46,18 @@
                 <li>MYSQL</li>
                 <li>Servoy</li>
             </ul>
-        </li>
-        <li>Education
-            <ul>
-                <li>BS Information Technology</li>
+        </div>
+        <div uib-accordion-group class="panel-default" heading="Education">
+            <ul class='tree'>
+                <li>Western Governor's University
+                    <ul>
+                        <li>BS Information Technology</li>
+                    </ul>
+                </li>
             </ul>
-        </li>
-        <li>Certification
-            <ul>
+        </div>
+        <div uib-accordion-group class="panel-default" heading="Certification">
+            <ul class='tree'>
                 <li>Microsoft
                     <ul>
                         <li>Certified Professional Windows 7 Installation</li>
@@ -58,7 +78,7 @@
                     </ul>
                 </li>
             </ul>
-        </li>
+        </div>
     </ul>
 </div>
 <div class='col-md-9'>

@@ -1,4 +1,5 @@
 .tree, .tree ul {
+    background: #393939;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -7,18 +8,15 @@
 
 .tree li {
     min-height: 30px;
-    font-size: 150%;
     max-width: 375px;
     background: #393939;
     padding: 3px 0 3px 10px;
-    border-bottom: solid #222;
 }
 
 .tree ul li {
-    display: none;
+    display: block;
     background: #2B2B2B;
     border-bottom: solid #393939;
-    font-size: 75%;
 }
 
 .tree ul li:last-child {
@@ -40,3 +38,6 @@
     border-bottom: none;
 }
 
+.panel-body {
+    background: #393939;
+}
